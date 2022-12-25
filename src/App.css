@@ -9,12 +9,12 @@
   
 }
 
-#game_canvas{
+/* #game_canvas{
   background-image: url(./sprites/background_test.png);
   background-size: contain;
   width: 600px;
   height: 360px;
-}
+} */
 
 .App {
   text-align: center;
