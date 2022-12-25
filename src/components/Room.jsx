@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Arrow from "./Arrow";
 
 class Room extends Component {
   state = {};
@@ -17,7 +18,7 @@ class Room extends Component {
   };
 
   render() {
-    const roomNumber = this.props.roomNumber + 1;
+    const roomNumber = this.props.roomNumber;
     if (roomNumber == 1) return this.renderRoom1();
 
     if (roomNumber == 2) return this.renderRoom2();
@@ -32,6 +33,13 @@ class Room extends Component {
       left: 30,
     };
 
+    const door = {
+      width: "160px",
+      position: "relative",
+      top: 70,
+      left: 250,
+    };
+
     return (
       <div
         style={{
@@ -39,8 +47,8 @@ class Room extends Component {
           backgroundImage: "url(/sprites/background_test.png)",
         }}
       >
-        <img src="/sprites/left_arrow.png" style={this.arrowStyle}></img>
-        <h1 style={word}>HEYYY</h1>
+        <Arrow direction="left" currentRoom={this.props.roomNumber} />
+        <img src="/sprites/door.png" style={door}></img>
       </div>
     );
   }
