@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CollectableObject from "./CollectableObject";
 
 class Room1Objects extends Component {
   state = {};
