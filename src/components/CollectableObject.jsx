@@ -7,8 +7,8 @@ class CollectableObject extends Component {
 
   storeStyle = {
     width: "75px",
-    position: "absolute",
-    bottom: "10px",
+    position: "relative",
+    top: "10px",
     left: "10px",
   };
 

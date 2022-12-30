@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CollectableObject from "./CollectableObject";
+import CollectItem from "./CollectItem";
 
 class Room2Objects extends Component {
   state = {};
@@ -14,11 +15,15 @@ class Room2Objects extends Component {
   render() {
     return (
       <div>
-        {/* <img src="/sprites/key.png" style={this.keyStyle} /> */}
-        <CollectableObject
+        <img
+          src="/sprites/key.png"
+          style={this.keyStyle}
+          onClick={CollectItem}
+        />
+        {/* <CollectableObject
           url="/sprites/key.png"
           style={this.keyStyle}
-        ></CollectableObject>
+        ></CollectableObject> */}
       </div>
     );
   }

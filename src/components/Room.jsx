@@ -33,23 +33,23 @@ class Room extends Component {
     return (
       <div className="slide-container">
         <Slide autoplay={false} transitionDuration={200} canSwipe={false}>
-          <div className="each-slide">
+          <div className="each-slide room-slide">
             <div style={{ backgroundImage: `url(${rooms[0]})` }}>
               <Room1Objects />
             </div>
           </div>
 
-          <div className="each-slide">
+          <div className="each-slide room-slide">
             <div style={{ backgroundImage: `url(${rooms[1]})` }}>
               <Room2Objects />
             </div>
           </div>
 
-          <div className="each-slide">
+          <div className="each-slide room-slide">
             <div style={{ backgroundImage: `url(${rooms[2]})` }}></div>
           </div>
 
-          <div className="each-slide">
+          <div className="each-slide room-slide">
             <div style={{ backgroundImage: `url(${rooms[3]})` }}>bbb</div>
           </div>
         </Slide>

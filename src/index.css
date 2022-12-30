@@ -13,13 +13,7 @@ code {
 }
 
 
-.each-slide > div {
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  height: 300px; */
-
+.room-slide > div {
   background-size: cover;
   width: 600px;
   height: 400px;
