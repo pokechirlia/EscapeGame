@@ -6,7 +6,7 @@ class Page extends Component {
   render() {
     return (
       <div id="game_container">
-        <Room roomNumber={1} />
+        <Room />
       </div>
     );
   }
