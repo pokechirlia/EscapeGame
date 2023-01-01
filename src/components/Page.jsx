@@ -17,8 +17,6 @@ class Page extends Component {
   };
 
   addItem = (name, url) => {
-    // const newState = this.state.collectedItem;
-    // .push({ name, url });
     this.setState(() => {
       return {
         collectedItem: [...this.state.collectedItem, { name: name, url: url }],
@@ -31,20 +29,6 @@ class Page extends Component {
     return (
       <div id="game_container">
         <Room addItem={this.addItem} />
-        {/* <Slide
-          autoplay={false}
-          transitionDuration={200}
-          canSwipe={false}
-          slidesToScroll={5}
-          slidesToShow={5}
-          indicators={true}
-        >
-          {this.state.collectedItem.map((item) => (
-            <div className="each-slide">
-              <img src={item} style={this.storeStyle} />
-            </div>
-          ))}
-        </Slide> */}
 
         <div id="item-container">
           {this.state.collectedItem.map((item) => (
