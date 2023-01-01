@@ -23,9 +23,10 @@ class Room1Objects extends Component {
     );
   }
 
-  openDoor() {
+  openDoor = (event) => {
     console.log("ayo");
-  }
+    this.props.addItem("door", "/sprites/door.png");
+  };
 }
 
 export default Room1Objects;
