@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/EscapeGame/static/css/main.9e683056.css",
+    "main.js": "/EscapeGame/static/js/main.3ba71595.js",
+    "static/js/787.5cccf6c2.chunk.js": "/EscapeGame/static/js/787.5cccf6c2.chunk.js",
+    "static/media/logo.svg": "/EscapeGame/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/EscapeGame/index.html",
+    "main.9e683056.css.map": "/EscapeGame/static/css/main.9e683056.css.map",
+    "main.3ba71595.js.map": "/EscapeGame/static/js/main.3ba71595.js.map",
+    "787.5cccf6c2.chunk.js.map": "/EscapeGame/static/js/787.5cccf6c2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e683056.css",
+    "static/js/main.3ba71595.js"
+  ]
+}
