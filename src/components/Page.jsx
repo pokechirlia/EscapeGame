@@ -22,7 +22,7 @@ class Page extends Component {
         collectedItem: [...this.state.collectedItem, { name: name, url: url }],
       };
     });
-    console.log(this.state.collectedItem);
+    // console.log(this.state.collectedItem);
   };
 
   render() {

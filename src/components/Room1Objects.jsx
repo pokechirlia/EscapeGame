@@ -1,38 +1,4 @@
-// import React, { Component } from "react";
-// import CollectableObject from "./CollectableObject";
-
 import { useState } from "react";
-
-// class Room1Objects extends Component {
-//   state = {};
-
-//   doorStyle = {
-//     width: "150px",
-//     position: "relative",
-//     top: "90px",
-//     left: "250px",
-//   };
-
-//   render() {
-//     return (
-//       <div>
-//         <img
-//           src="/sprites/door.png"
-//           style={this.doorStyle}
-//           onClick={this.openDoor}
-//         />
-//       </div>
-//     );
-//   }
-
-//   openDoor = (event) => {
-//     console.log("ayo");
-//     this.style.visibility = "hidden";
-//     this.props.addItem("door", "/sprites/door.png");
-//   };
-// }
-
-// export default Room1Objects;
 
 function Room1Objects(props) {
   const [isVisible, setVisible] = useState(true);
@@ -48,11 +14,9 @@ function Room1Objects(props) {
     left: "250px",
   };
 
-  const openDoor = (event) => {
-    console.log("ayo");
+  const collectItem = (name, url) => {
     setVisible(false);
-    // this.style.visibility = "hidden";
-    props.addItem("door", "/sprites/door.png");
+    props.addItem(name, url);
   };
 
   return (
@@ -60,7 +24,7 @@ function Room1Objects(props) {
       <img
         src="/sprites/door.png"
         style={{ ...doorStyle, visibility: isVisible ? "visible" : "hidden" }}
-        onClick={openDoor}
+        onClick={() => collectItem("door", "/sprites/door.png")}
       />
     </div>
   );

@@ -41,7 +41,7 @@ class Room extends Component {
 
           <div className="each-slide room-slide">
             <div style={{ backgroundImage: `url(${rooms[1]})` }}>
-              <Room2Objects />
+              <Room2Objects addItem={this.props.addItem} />
             </div>
           </div>
 
