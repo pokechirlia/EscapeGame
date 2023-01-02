@@ -8,12 +8,14 @@ class Page extends Component {
   state = {
     collectedItem: [
       { name: "key", url: "/sprites/key.png" },
-      // { name: "door", url: "/sprites/door.png" },
+      { name: "door", url: "/sprites/door.png" },
     ],
   };
 
   storeStyle = {
-    height: "75px",
+    height: "70%",
+    padding: "20px 5px",
+    cursor: "pointer",
   };
 
   addItem = (name, url) => {
@@ -22,7 +24,10 @@ class Page extends Component {
         collectedItem: [...this.state.collectedItem, { name: name, url: url }],
       };
     });
-    // console.log(this.state.collectedItem);
+  };
+
+  dragStart = (event) => {
+    event.dataTransfer.setData("name", event.target.id);
   };
 
   render() {
@@ -32,7 +37,13 @@ class Page extends Component {
 
         <div id="item-container">
           {this.state.collectedItem.map((item) => (
-            <img src={item.url} style={this.storeStyle} key={item.name} />
+            <img
+              src={item.url}
+              style={this.storeStyle}
+              id={item.name}
+              onDragStart={this.dragStart}
+              draggable
+            />
           ))}
         </div>
         {/* 

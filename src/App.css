@@ -9,6 +9,10 @@
   
 }
 
+#item-container {
+  height: 80px;
+}
+
 /* #game_canvas{
   background-image: url(./sprites/background_test.png);
   background-size: contain;

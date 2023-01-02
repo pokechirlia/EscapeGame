@@ -19,12 +19,27 @@ function Room1Objects(props) {
     props.addItem(name, url);
   };
 
+  const disableNativeDragOverEvent = (e) => e.preventDefault();
+
+  const openDoor = (event) => {
+    // alert(event.target.src);
+    const draggedObject = event.dataTransfer.getData("name");
+
+    if (draggedObject == "key") alert("holycrab");
+  };
+
+  const aaa = (event) => {
+    alert(event);
+  };
+
   return (
     <div>
       <img
         src="/sprites/door.png"
         style={{ ...doorStyle, visibility: isVisible ? "visible" : "hidden" }}
-        onClick={() => collectItem("door", "/sprites/door.png")}
+        // onClick={() => collectItem("door", "/sprites/door.png")}
+        onDragOver={disableNativeDragOverEvent}
+        onDrop={openDoor}
       />
     </div>
   );
