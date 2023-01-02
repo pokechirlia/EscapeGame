@@ -25,10 +25,10 @@ class Room extends Component {
 
   render() {
     const rooms = [
-      "/sprites/room1.png",
-      "/sprites/room2.png",
-      "/sprites/room3.png",
-      "/sprites/room4.png",
+      "/EscapeGame/sprites/room1.png",
+      "/EscapeGame/sprites/room2.png",
+      "/EscapeGame/sprites/room3.png",
+      "/EscapeGame/sprites/room4.png",
     ];
     return (
       <div className="slide-container">
