@@ -2,13 +2,12 @@ import React, { Component } from "react";
 import Room from "./Room";
 // import { Slide } from "react-slideshow-image";
 // import "react-slideshow-image/dist/styles.css";
-import CollectItem from "./CollectItem";
 
 class Page extends Component {
   state = {
     collectedItem: [
-      { name: "key", url: "/sprites/key.png" },
-      { name: "door", url: "/sprites/door.png" },
+      // { name: "key", url: "/sprites/key.png" },
+      // { name: "door", url: "/sprites/door.png" },
     ],
   };
 

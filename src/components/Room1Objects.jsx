@@ -1,7 +1,9 @@
 import { useState } from "react";
+import Modal from "./Modal";
 
 function Room1Objects(props) {
   const [isVisible, setVisible] = useState(true);
+  const [isDoorOpen, setDoorOpen] = useState(false);
 
   var collectedStyle = {
     visibility: "hidden",
@@ -22,18 +24,16 @@ function Room1Objects(props) {
   const disableNativeDragOverEvent = (e) => e.preventDefault();
 
   const openDoor = (event) => {
-    // alert(event.target.src);
     const draggedObject = event.dataTransfer.getData("name");
 
-    if (draggedObject == "key") alert("holycrab");
+    if (draggedObject == "key") {
+      // alert("holycrab");
+      setDoorOpen(true);
+    }
   };
 
-  const aaa = (event) => {
-    alert(event);
-  };
-
-  return (
-    <div>
+  const renderRoom = () => {
+    return (
       <img
         src="/sprites/door.png"
         style={{ ...doorStyle, visibility: isVisible ? "visible" : "hidden" }}
@@ -41,6 +41,22 @@ function Room1Objects(props) {
         onDragOver={disableNativeDragOverEvent}
         onDrop={openDoor}
       />
+    );
+  };
+
+  return (
+    <div>
+      {isDoorOpen ? (
+        <Modal closeModal={setDoorOpen} />
+      ) : (
+        <img
+          src="/sprites/door.png"
+          style={{ ...doorStyle, visibility: isVisible ? "visible" : "hidden" }}
+          // onClick={() => collectItem("door", "/sprites/door.png")}
+          onDragOver={disableNativeDragOverEvent}
+          onDrop={openDoor}
+        />
+      )}
     </div>
   );
 }

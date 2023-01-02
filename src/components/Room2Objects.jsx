@@ -32,7 +32,6 @@
 // export default Room2Objects;
 
 import { useState } from "react";
-import CollectItem from "./CollectItem";
 
 function Room2Objects(props) {
   const [isVisible, setVisible] = useState(true);
